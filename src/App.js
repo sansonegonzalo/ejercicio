@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import EjercicioUno from './components/EjercicioUno';
+
+var myArray = [1, 2, 1, 3, 3, 1, 2, 1, 5, 1];
 
 function App() {
+  const [inputOne, setInputOne] = useState('');
+  const [convert, setConvert] = useState(false);
+
+  const handleInput = (e) => setInputOne(e.target.value);
+
+  const handleKeyPress = (e) => (e.key === 'Enter' ? handleConvert() : null);
+
+  const handleConvert = (_) => setConvert(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <input
+        required
+        type={'text'}
+        onChange={handleInput}
+        onKeyPress={handleKeyPress}
+        placeholder={'Ejercicio 1'}
+      />
+      <label onClick={() => handleConvert()} />
+      <button onSubmit={() => handleConvert()}> Convertir </button>
+      {convert ? <EjercicioUno listaNum={inputOne} /> : null}
     </div>
   );
 }
