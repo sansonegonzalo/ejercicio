@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+EJERCICIO 1.
+Escribir un programa en React.js que recorra un arreglo y genere un histograma en base a
+los números de este. El arreglo se llama myArray y contiene 10 elementos que corresponden a números
+enteros del 1 al 5.
+Un histograma representa que tanto un elemento aparece en un conjunto de datos (Debe mostrar la
+frecuencia para todos los números del 1 al 5, incluso si no están presentes en el arreglo).
+Por ejemplo, para el arreglo: myArray:=(1,2,1,3,3,1,2,1,5,1) el histograma se vería así:
 
-## Available Scripts
+1: *****
+2: **
+3: **
+4:
+5: *
 
-In the project directory, you can run:
+Nota: Asegúrese de que los resultados se impriman exactamente como aparecen aquí, ya que incluso un
+espacio faltante o sobrante puede marcar la pregunta como incorrecta (Notar espacio entre los ":" y el
+primer asterisco).
+var myArray = [1,2,1,3,3,1,2,1,5,1];
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+EJERCICIO 2.
+Escribir un programa utilizando React.js que imprima una X construida a base de la letra X
+y utilizar el carácter de subrayado como espacio. El tamaño de la X se basa en una variable n que
+indicará el tamaño de la letra para imprimir (en una matriz de n x n). Por ejemplo, para n: = 5 se
+obtiene:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+X___X
+_X_X_
+__X__
+_X_X_
+X___X
 
-### `yarn test`
+y para n:=6 se obtiene:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+X____X
+_X__X_
+__XX__
+__XX__
+_X__X_
+X____X
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Si n es igual a cero imprimir "ERROR"
+Nota: Tenga en cuenta que el código debe imprimir los resultados exactamente como se muestra con el fin
+de que la pregunta sea considerada valida durante la prueba (El caracter "X" en mayúscula y el guion bajo
+"_" para los espacios)
+var n = 5;
+REQUERIMIENTOS:
+1. Crear un componente en React en el cual se pueda insertar el Array y traiga el resultado del
+EJERCICIO 1.
+2. Crear un componente en React en el cual se pueda insertar el tamaño de la letra y traiga el
+resultado del EJERCICIO 2.
