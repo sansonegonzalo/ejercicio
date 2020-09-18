@@ -15,7 +15,6 @@ const crearCroquis = (input) => {
   let length = input;
 
   for (let i = 0; i < length; i++) {
-    console.log(tablero[i]);
     for (let j = 0; j < length; j++) {
       if (i === j) {
         tablero[i][j] = 'x';
