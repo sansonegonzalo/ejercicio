@@ -1,16 +1,28 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import store from './redux/store';
+import { connect } from 'react-redux';
 import Ejercicio from './components/Ejercicio';
+import ErrorAlert from './components/ErrorAlert';
+import { HISTOGRAMA, MATRIZ } from './constants';
 
-function App() {
+function App({ state }) {
   return (
-    <Provider store={store}>
-      <div>
-        <Ejercicio />
-      </div>
-    </Provider>
+    <div>
+      {state.errorReducer.errorState ? (
+        <ErrorAlert />
+      ) : (
+        <>
+          <Ejercicio ejercicio={HISTOGRAMA} />
+          <Ejercicio ejercicio={MATRIZ} />
+        </>
+      )}
+    </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    state,
+  };
+};
+
+export default connect(mapStateToProps)(App);

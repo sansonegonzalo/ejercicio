@@ -1,16 +1,19 @@
 import React from 'react';
+import { HISTOGRAMA } from '../constants';
 
-const Results = ({ result }) => {
+const Results = ({ result, ejercicio }) => {
   return (
-    <ul>
+    <>
       {result.map((el, index) => {
         return (
-          <li key={`${el.num} - ${index}`}>
-            {`${el.num}: ${'*'.repeat(el.cantidad)}`}
-          </li>
+          <p key={`${el} - ${index}`}>
+            {ejercicio === HISTOGRAMA
+              ? `${el.num}: ${'*'.repeat(el.cantidad)}`
+              : `${el.join('')}`}
+          </p>
         );
       })}
-    </ul>
+    </>
   );
 };
 
