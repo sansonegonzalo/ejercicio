@@ -5,7 +5,7 @@ import { discardError } from '../redux/actions/errorActions';
 const ErrorAlert = ({ state, discardError }) => {
   return (
     <div>
-      <h2>Something went wrong:</h2>
+      <h2>ERROR:</h2>
       <p>{state.errorReducer.errorMessage}</p>
       <button onClick={() => discardError()}>Volver al inicio</button>
     </div>
